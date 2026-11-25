@@ -7,7 +7,8 @@ import streamlit as st
 from sqlalchemy import create_engine, text, inspect
 from datetime import date, timedelta
 
-DATABASE_URL = os.environ.get("DATABASE_URL")
+
+DATABASE_URL = st.secrets.get("DATABASE_URL")
 
 st.set_page_config(
     page_title="Dashboard",
